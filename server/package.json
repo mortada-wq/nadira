@@ -1,0 +1,23 @@
+{
+  "name": "nadira-image-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nadira - Arabic RTL AI image generation platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build": "echo \"No backend build step required\"",
+    "build:frontend": "echo \"Static frontend is ready in public/\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "aws-sdk": "latest",
+    "axios": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "uuid": "latest"
+  }
+}

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نديرة | مولد الصور بالذكاء الاصطناعي</title>
+    <meta
+      name="description"
+      content="نديرة - منصة عربية كاملة لتوليد الصور بالذكاء الاصطناعي بتصميم RTL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="sidebarOverlay" class="sds-sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <aside id="sidebar" class="sds-sidebar" aria-label="القائمة الجانبية">
+      <div class="sds-sidebar__header">
+        <div class="logo-container">
+          <svg class="sds-sidebar__logo" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="30" height="30" rx="9" stroke="url(#logoStrokeA)" stroke-width="2" />
+            <path d="M8 16h16M16 8v16" stroke="url(#logoStrokeA)" stroke-width="2.2" stroke-linecap="round" />
+            <text x="40" y="22" fill="#1B267D" font-size="20" font-family="Aref Ruqaa">نديرة</text>
+            <defs>
+              <linearGradient id="logoStrokeA" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A032B4" />
+                <stop offset="1" stop-color="#1B267D" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <button class="sds-btn sds-btn--icon" onclick="toggleSidebar()" aria-label="إغلاق القائمة">✕</button>
+      </div>
+
+      <nav class="sds-sidebar__body" aria-label="روابط المنصة">
+        <a href="#" class="sds-sidebar__nav-item is-active"><span class="sds-sidebar__nav-icon">🏠</span>الرئيسية</a>
+        <a href="#" class="sds-sidebar__nav-item"><span class="sds-sidebar__nav-icon">🎨</span>إنشاء الصور</a>
+        <a href="#" class="sds-sidebar__nav-item"><span class="sds-sidebar__nav-icon">🎵</span>إنشاء الصوت</a>
+        <a href="#" class="sds-sidebar__nav-item"><span class="sds-sidebar__nav-icon">📊</span>إنشاء الرسومات</a>
+        <a href="#" class="sds-sidebar__nav-item"><span class="sds-sidebar__nav-icon">💬</span>المحادثة</a>
+        <a href="#" class="sds-sidebar__nav-item"><span class="sds-sidebar__nav-icon">⚙️</span>الإعدادات</a>
+      </nav>
+    </aside>
+
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-container">
+          <svg class="logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="36" height="36" rx="10" stroke="url(#logoStrokeB)" stroke-width="2" />
+            <path d="M10 19h18M19 10v18" stroke="url(#logoStrokeB)" stroke-width="2.4" stroke-linecap="round" />
+            <text x="45" y="27" fill="#1B267D" font-size="24" font-family="Aref Ruqaa">صاحب</text>
+            <defs>
+              <linearGradient id="logoStrokeB" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A032B4" />
+                <stop offset="1" stop-color="#1B267D" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="brand-name">نديرة</span>
+        </div>
+        <button class="sds-btn sds-btn--icon menu-btn" onclick="toggleSidebar()" aria-label="فتح القائمة">☰</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero sds-fade-up">
+        <svg class="hero-logo" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="38" stroke="url(#heroGradient)" stroke-width="3" />
+          <path d="M40 18v44M18 40h44" stroke="url(#heroGradient)" stroke-width="4" stroke-linecap="round" />
+          <defs>
+            <linearGradient id="heroGradient" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1B267D" />
+              <stop offset="0.5" stop-color="#A032B4" />
+              <stop offset="1" stop-color="#F2A032" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <h1>
+          ✨ نديرة - <span class="hero-gradient-text">سحر الإبداع بالذكاء الاصطناعي</span>
+        </h1>
+        <p class="typing-text">حوّل أفكارك إلى صور فنية مذهلة بضغطة زر واحدة</p>
+      </section>
+
+      <section class="generator-section sds-fade-up">
+        <h2 class="section-title">
+          <span class="sds-icon-glass">🎨</span>
+          صف الصورة التي تتخيلها
+        </h2>
+
+        <div class="prompt-container">
+          <div class="prompt-wrapper">
+            <textarea
+              id="promptInput"
+              class="sds-textarea"
+              placeholder="اكتب وصفًا دقيقًا للصورة التي تريد إنشاءها..."
+              maxlength="500"
+            ></textarea>
+            <span id="charCount" class="char-count">0 / 500</span>
+          </div>
+          <button id="enhanceBtn" class="sds-btn sds-btn--gradient sds-btn--lg" onclick="enhancePrompt()">
+            ✨ تحسين تلقائي
+          </button>
+        </div>
+
+        <div class="style-section sds-fade-up">
+          <h3 class="subsection-title">اختر الأسلوب الفني</h3>
+          <div class="style-grid sds-stagger" id="styleGrid">
+            <div class="style-card active style-realistic" data-style="واقعي" onclick="selectStyle(this)"></div>
+            <div class="style-card style-cartoon" data-style="رسوم متحركة" onclick="selectStyle(this)"></div>
+            <div class="style-card style-oil" data-style="زيتي" onclick="selectStyle(this)"></div>
+            <div class="style-card style-3d" data-style="ثلاثي الأبعاد" onclick="selectStyle(this)"></div>
+            <div class="style-card style-anime" data-style="أنمي" onclick="selectStyle(this)"></div>
+            <div class="style-card style-cyberpunk" data-style="سايبربانك" onclick="selectStyle(this)"></div>
+          </div>
+        </div>
+
+        <div class="advanced-options-toggle" onclick="toggleAdvancedOptions()">
+          ⚙️ إعدادات متقدمة
+        </div>
+
+        <div id="advancedOptions" class="advanced-options">
+          <div class="option-group">
+            <label class="sds-label" for="aspectRatio">نسبة الأبعاد</label>
+            <select id="aspectRatio" class="sds-select">
+              <option value="1:1">مربع (1:1)</option>
+              <option value="16:9">عريض (16:9)</option>
+              <option value="9:16">عمودي (9:16)</option>
+              <option value="4:3">قياسي (4:3)</option>
+            </select>
+          </div>
+
+          <div class="option-group">
+            <label class="sds-label" for="quality">الجودة</label>
+            <select id="quality" class="sds-select">
+              <option value="standard">قياسية</option>
+              <option value="hd">عالية الدقة</option>
+              <option value="ultra">فائقة الجودة</option>
+            </select>
+          </div>
+
+          <div class="option-group">
+            <label class="sds-label" for="creativity">قوة الإبداع: <span id="creativityValue" class="range-value">7</span></label>
+            <input id="creativity" class="sds-range" type="range" min="1" max="15" value="7" />
+          </div>
+
+          <div class="option-group">
+            <label class="sds-label" for="numImages">عدد الصور</label>
+            <select id="numImages" class="sds-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="sds-btn sds-btn--primary sds-btn--lg" onclick="generateImages()">
+          🎨 إنشاء الصور
+        </button>
+
+        <div id="gallery" class="gallery" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="toastContainer" class="toast-container" aria-live="assertive"></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
