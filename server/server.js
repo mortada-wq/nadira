@@ -1,4 +1,5 @@
 const path = require("path");
+require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const AWS = require("aws-sdk");
@@ -209,7 +210,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
