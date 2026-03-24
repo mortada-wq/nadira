@@ -8,6 +8,29 @@ const UI_TEXT = {
   prompt_enhanced: "تم تحسين الوصف بنجاح"
 };
 
+const ICON_PATH = "/assets/icons/";
+const ICONS = {
+  home: `${ICON_PATH}home.svg`,
+  "image-gen": `${ICON_PATH}image-gen.svg`,
+  "audio-gen": `${ICON_PATH}audio-gen.svg`,
+  "graphic-gen": `${ICON_PATH}graphic-gen.svg`,
+  chat: `${ICON_PATH}chat.svg`,
+  settings: `${ICON_PATH}settings.svg`,
+  send: `${ICON_PATH}send.svg`,
+  close: `${ICON_PATH}close.svg`,
+  menu: `${ICON_PATH}menu.svg`,
+  download: `${ICON_PATH}download.svg`,
+  share: `${ICON_PATH}share.svg`,
+  copy: `${ICON_PATH}copy.svg`,
+  delete: `${ICON_PATH}delete.svg`,
+  generate: `${ICON_PATH}generate.svg`,
+  upload: `${ICON_PATH}upload.svg`,
+  play: `${ICON_PATH}play.svg`,
+  pause: `${ICON_PATH}pause.svg`,
+  logo: "/assets/logo.svg",
+  "logo-mark": "/assets/logo-mark.svg"
+};
+
 // ========== SIDEBAR TOGGLE ==========
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
@@ -146,7 +169,7 @@ async function generateImages() {
   } finally {
     btn.disabled = false;
     btn.classList.remove("sds-btn--loading");
-    btn.innerHTML = "🎨 إنشاء الصور";
+    btn.innerHTML = `<img class="sds-btn__icon" src="${ICONS.generate}" alt="" aria-hidden="true"> إنشاء الصور`;
   }
 }
 
@@ -193,9 +216,9 @@ function displayImages(images, prompt) {
       <div class="gallery-item-overlay">
         <p class="gallery-item-prompt">${safePrompt}</p>
         <div class="gallery-item-actions">
-          <button class="action-btn" onclick="downloadImage('${escapeHtml(imageUrl)}', ${index})">⬇️ تحميل</button>
-          <button class="action-btn" onclick="shareImage('${escapeHtml(imageUrl)}')">🔗 مشاركة</button>
-          <button class="action-btn" onclick="upscaleImage('${escapeHtml(imageUrl)}')">🔍 تكبير</button>
+          <button class="action-btn" onclick="downloadImage('${escapeHtml(imageUrl)}', ${index})"><img class="action-btn__icon" src="${ICONS.download}" alt="" aria-hidden="true"> تحميل</button>
+          <button class="action-btn" onclick="shareImage('${escapeHtml(imageUrl)}')"><img class="action-btn__icon" src="${ICONS.share}" alt="" aria-hidden="true"> مشاركة</button>
+          <button class="action-btn" onclick="upscaleImage('${escapeHtml(imageUrl)}')"><img class="action-btn__icon" src="${ICONS.generate}" alt="" aria-hidden="true"> تكبير</button>
         </div>
       </div>
     `;
@@ -243,7 +266,6 @@ function showToast(message, type = "success") {
   const toast = document.createElement("div");
   toast.className = `toast toast-${type}`;
   toast.innerHTML = `
-    <span class="toast-icon">${type === "success" ? "✓" : "✕"}</span>
     <span class="toast-message">${message}</span>
   `;
   container.appendChild(toast);
